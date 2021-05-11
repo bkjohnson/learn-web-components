@@ -10,7 +10,7 @@ export class MyComponent {
   /**
    * The first name
    */
-  @Prop() first: string;
+  @Prop() first: string = "John";
 
   /**
    * The middle name
