@@ -1,11 +1,15 @@
 import { newE2EPage } from '@stencil/core/testing';
 
-describe('todo-item', () => {
-  it('renders', async () => {
+describe('Exercise 3', () => {
+  it('fires a custom event when toggled', async () => {
     const page = await newE2EPage();
     await page.setContent('<todo-item></todo-item>');
 
-    const element = await page.find('todo-item');
-    expect(element).toHaveClass('hydrated');
+    const toggleSpy = await page.spyOnEvent('todoItemToggled');
+
+    const item = await page.find('todo-item >>> label');
+    await item .click();
+
+    expect(toggleSpy).toHaveReceivedEventTimes(1);
   });
 });
