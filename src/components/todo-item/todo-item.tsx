@@ -16,6 +16,7 @@ export class TodoItem {
 
 
   private toggleChecked(): void {
+    this.todoItemToggled.emit({ name: this.name });
   }
 
   render() {

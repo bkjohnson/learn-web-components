@@ -7,6 +7,10 @@ import { Component, Host, Prop, h } from '@stencil/core';
 })
 export class TodoCompleted {
 
+  @Prop() completed: number;
+
+  @Prop() total: number;
+
   render() {
     const { completed, total } = this;
     return (
