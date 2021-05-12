@@ -24,6 +24,9 @@ export namespace Components {
         "completed": number;
         "total": number;
     }
+    interface TodoItem {
+        "name": string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -38,9 +41,16 @@ declare global {
         prototype: HTMLTodoCompletedElement;
         new (): HTMLTodoCompletedElement;
     };
+    interface HTMLTodoItemElement extends Components.TodoItem, HTMLStencilElement {
+    }
+    var HTMLTodoItemElement: {
+        prototype: HTMLTodoItemElement;
+        new (): HTMLTodoItemElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "todo-completed": HTMLTodoCompletedElement;
+        "todo-item": HTMLTodoItemElement;
     }
 }
 declare namespace LocalJSX {
@@ -62,9 +72,14 @@ declare namespace LocalJSX {
         "completed"?: number;
         "total"?: number;
     }
+    interface TodoItem {
+        "name"?: string;
+        "onTodoItemToggled"?: (event: CustomEvent<any>) => void;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "todo-completed": TodoCompleted;
+        "todo-item": TodoItem;
     }
 }
 export { LocalJSX as JSX };
@@ -73,6 +88,7 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "todo-completed": LocalJSX.TodoCompleted & JSXBase.HTMLAttributes<HTMLTodoCompletedElement>;
+            "todo-item": LocalJSX.TodoItem & JSXBase.HTMLAttributes<HTMLTodoItemElement>;
         }
     }
 }
