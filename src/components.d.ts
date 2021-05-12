@@ -27,6 +27,8 @@ export namespace Components {
     interface TodoItem {
         "name": string;
     }
+    interface TodoNotification {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -47,10 +49,17 @@ declare global {
         prototype: HTMLTodoItemElement;
         new (): HTMLTodoItemElement;
     };
+    interface HTMLTodoNotificationElement extends Components.TodoNotification, HTMLStencilElement {
+    }
+    var HTMLTodoNotificationElement: {
+        prototype: HTMLTodoNotificationElement;
+        new (): HTMLTodoNotificationElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "todo-completed": HTMLTodoCompletedElement;
         "todo-item": HTMLTodoItemElement;
+        "todo-notification": HTMLTodoNotificationElement;
     }
 }
 declare namespace LocalJSX {
@@ -76,10 +85,13 @@ declare namespace LocalJSX {
         "name"?: string;
         "onTodoItemToggled"?: (event: CustomEvent<any>) => void;
     }
+    interface TodoNotification {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "todo-completed": TodoCompleted;
         "todo-item": TodoItem;
+        "todo-notification": TodoNotification;
     }
 }
 export { LocalJSX as JSX };
@@ -89,6 +101,7 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "todo-completed": LocalJSX.TodoCompleted & JSXBase.HTMLAttributes<HTMLTodoCompletedElement>;
             "todo-item": LocalJSX.TodoItem & JSXBase.HTMLAttributes<HTMLTodoItemElement>;
+            "todo-notification": LocalJSX.TodoNotification & JSXBase.HTMLAttributes<HTMLTodoNotificationElement>;
         }
     }
 }

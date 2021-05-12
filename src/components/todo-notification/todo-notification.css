@@ -1,0 +1,20 @@
+:host {
+  display: block;
+}
+
+.wrapper {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.toast {
+  background: red;
+  padding: 1em;
+  width: 400px;
+  margin: 0.5em;
+  border: 2px solid blue;
+  border-radius: 4px;
+}

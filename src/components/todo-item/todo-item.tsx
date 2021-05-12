@@ -15,8 +15,7 @@ export class TodoItem {
   todoItemToggled: EventEmitter;
 
 
-  private toggleChecked(e: MouseEvent): void {
-    console.log(e)
+  private toggleChecked(): void {
   }
 
   render() {
