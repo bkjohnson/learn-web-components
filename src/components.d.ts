@@ -6,8 +6,6 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface DisplayPrice {
-    }
     interface MyComponent {
         /**
           * The first name
@@ -22,28 +20,30 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TodoCompleted {
+        "completed": number;
+        "total": number;
+    }
 }
 declare global {
-    interface HTMLDisplayPriceElement extends Components.DisplayPrice, HTMLStencilElement {
-    }
-    var HTMLDisplayPriceElement: {
-        prototype: HTMLDisplayPriceElement;
-        new (): HTMLDisplayPriceElement;
-    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTodoCompletedElement extends Components.TodoCompleted, HTMLStencilElement {
+    }
+    var HTMLTodoCompletedElement: {
+        prototype: HTMLTodoCompletedElement;
+        new (): HTMLTodoCompletedElement;
+    };
     interface HTMLElementTagNameMap {
-        "display-price": HTMLDisplayPriceElement;
         "my-component": HTMLMyComponentElement;
+        "todo-completed": HTMLTodoCompletedElement;
     }
 }
 declare namespace LocalJSX {
-    interface DisplayPrice {
-    }
     interface MyComponent {
         /**
           * The first name
@@ -58,17 +58,21 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TodoCompleted {
+        "completed"?: number;
+        "total"?: number;
+    }
     interface IntrinsicElements {
-        "display-price": DisplayPrice;
         "my-component": MyComponent;
+        "todo-completed": TodoCompleted;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "display-price": LocalJSX.DisplayPrice & JSXBase.HTMLAttributes<HTMLDisplayPriceElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "todo-completed": LocalJSX.TodoCompleted & JSXBase.HTMLAttributes<HTMLTodoCompletedElement>;
         }
     }
 }
