@@ -26,6 +26,7 @@ export class AppShell {
   render() {
     return (
       <Host>
+        <slot name="top"></slot>
         {this.loading ? <div>Loading...</div> : (
           <todo-notification>
             {this.items.map(item =>
@@ -33,6 +34,7 @@ export class AppShell {
             )}
           </todo-notification>
         )}
+        <slot name="bottom"></slot>
       </Host>
     );
   }
