@@ -4,7 +4,12 @@ import { defineCustomElements } from '../../../loader';
 defineCustomElements();
 
 export default function Home() {
-  const Something = () => <div>Lookie here, React stuff with Web Components!</div>
+  const Something = () => (
+    <div>
+      <p>Lookie here, React stuff with Web Components!</p>
+      <todo-completed completed="5" total="10"></todo-completed>
+    </div>
+  )
 
   return (
     <div className="container">
