@@ -3,20 +3,22 @@ import { defineCustomElements } from '../../../loader';
 
 defineCustomElements();
 
-
 export default function Home() {
+  const Something = () => <div>Lookie here, React stuff with Web Components!</div>
+
   return (
     <div className="container">
       <Head>
         <title>Create Next App</title>
       </Head>
 
-      <my-component></my-component>
-
       <main>
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <my-component></my-component>
+        <app-shell>
+          <div slot="bottom">
+            <Something></Something>
+          </div>
+        </app-shell>
       </main>
 
       <style jsx global>{`
