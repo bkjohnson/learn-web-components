@@ -48,7 +48,7 @@ Exercise 1 is about using props on an already provided Web Component.
 
 ### Exercise 2
 
-Exercise 2 is about creating/modifying a Web Component to add a prop and _then_ use that prop.
+Exercise 2 is about adding props to an existing Web Component definition.
 
 ### Exercise 3
 

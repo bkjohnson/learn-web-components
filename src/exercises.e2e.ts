@@ -1,5 +1,13 @@
 import { newE2EPage } from '@stencil/core/testing';
 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+}
+
+
 describe('Exercise 1', () => {
   it('renders the provided props', async () => {
     const page = await newE2EPage();
@@ -19,16 +27,20 @@ describe('Exercise 1', () => {
 });
 
 describe('Exercise 2', () => {
-  it('renders', async () => {
+  it('renders using the new custom props', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<todo-completed completed="5" total="10"></todo-completed>');
+    const total = getRandomInt(1, 40);
+    const completed = getRandomInt(0, total);
+
+    await page.setContent(`<todo-completed completed="${completed}" total="${total}"></todo-completed>`);
+
     const element = await page.find('todo-completed');
     expect(element).toEqualHtml(`
-      <todo-completed class="hydrated" completed="5" total="10">
+      <todo-completed class="hydrated" completed="${completed}" total="${total}">
         <mock:shadow-root>
           <span>
-            You have completed 5 out of 10 items.
+            You have completed ${completed} out of ${total} items.
           </span>
         </mock:shadow-root>
       </todo-completed>
