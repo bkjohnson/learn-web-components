@@ -1,16 +1,16 @@
 import { newE2EPage } from '@stencil/core/testing';
 
 describe('Exercise 1', () => {
-  it('renders', async () => {
+  it('renders the provided props', async () => {
     const page = await newE2EPage();
 
-    await page.setContent('<my-component></my-component>');
+    await page.setContent('<my-component first="John" middle="F." last="Kennedy"></my-component>');
     const element = await page.find('my-component');
     expect(element).toEqualHtml(`
-      <my-component class="hydrated">
+      <my-component first="John" middle="F." last="Kennedy" class="hydrated">
         <mock:shadow-root>
           <div>
-            Hello, World! I'm John
+            Hello, World! I'm John F. Kennedy
           </div>
         </mock:shadow-root>
       </my-component>
