@@ -27,8 +27,6 @@ export class MyComponent {
   }
 
   render() {
-    console.log(this.getText());
-
-    return <div>Hello, World! I'm UNFINISHED</div>;
+    return <div>Hello, World! I'm {this.getText()}</div>;
   }
 }
