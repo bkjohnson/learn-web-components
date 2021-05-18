@@ -18,7 +18,7 @@ yarn test
 
 You should see this in your output:
 
-![Exercise 1 output](./ex_1_output.png)
+![Exercise 1 output](./img/ex_1_output.png)
 
 ### Run command
 

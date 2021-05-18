@@ -9,7 +9,7 @@ Exercise 5 will be the last of the exercises to offer automated tests that we're
 We will be using the branch `ex-5`:
 
 ```bash
-git checkout -f ex-4
+git checkout -f ex-5
 ```
 
 ### Setting expectations
@@ -20,7 +20,7 @@ yarn test
 
 #### Output
 
-![Exercise 5 output](./ex_5_output.png)
+![Exercise 5 output](./img/ex_5_output.png)
 
 The lifecycle method isn't populating our `items` array and isn't changing the `loading` state variable.
 

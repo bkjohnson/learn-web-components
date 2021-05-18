@@ -22,7 +22,7 @@ yarn test
 
 #### Output
 
-![Exercise 3 output](./ex_3_output.png)
+![Exercise 3 output](./img/ex_3_output.png)
 
 ### Run command
 

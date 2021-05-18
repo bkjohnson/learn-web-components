@@ -26,7 +26,7 @@ yarn test
 
 #### Output
 
-![Exercise 4 output](./ex_4_output.png)
+![Exercise 4 output](./img/ex_4_output.png)
 
 The test is expecting an extra DOM node to be rendered to the wrapper after a click, and it isn't there.
 
