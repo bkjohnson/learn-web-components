@@ -52,11 +52,11 @@ Exercise 2 is about adding props to an existing Web Component definition.
 
 ### Exercise 3
 
-Exercise 3 is about using internal state and firing Custom Events.
+Exercise 3 is about firing Custom Events.
 
 ### Exercise 4
 
-Exercise 4 is Custom Events continued. This will focus on event handling.
+Exercise 4 is Custom Events continued. This will focus on event handling and using internal State.
 
 ### Exercise 5
 

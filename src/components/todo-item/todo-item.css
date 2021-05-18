@@ -1,7 +1,7 @@
 :host {
   display: block;
   height: 80px;
-  bordeR: 1px solid gray;
+  border: 1px solid gray;
 }
 
 li, label {

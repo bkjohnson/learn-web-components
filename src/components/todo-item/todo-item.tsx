@@ -8,15 +8,14 @@ import { Component, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
 export class TodoItem {
   @Prop() name: string;
 
-  @Event({
-    composed: true,
-    bubbles: true,
-  })
+  checked: boolean = false;
+
+  @Event()
   todoItemToggled: EventEmitter;
 
-
   private toggleChecked(): void {
-    this.todoItemToggled.emit({ name: this.name });
+    this.checked = !this.checked;
+    this.todoItemToggled.emit({ name: this.name, checked: this.checked });
   }
 
   render() {
@@ -24,7 +23,7 @@ export class TodoItem {
       <Host>
         <li>
           <label>
-            <input type="checkbox" name="peas" onClick={this.toggleChecked.bind(this)}></input>
+            <input type="checkbox" onClick={this.toggleChecked.bind(this)}></input>
             {this.name}
           </label>
         </li>

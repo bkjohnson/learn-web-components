@@ -59,7 +59,7 @@ describe('Exercise 3', () => {
     await item .click();
 
     expect(toggleSpy).toHaveReceivedEventTimes(1);
-    expect(toggleSpy).toHaveReceivedEventDetail({name: 'Take compost out'})
+    expect(toggleSpy).toHaveReceivedEventDetail({name: 'Take compost out', checked: true})
   });
 });
 
