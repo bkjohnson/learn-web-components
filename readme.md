@@ -64,4 +64,4 @@ Exercise 5 is back to Web Components. It will focus on the lifecycle methods and
 
 ### Exercise 6
 
-Exercise 6 is where we will piece all of the components together to build a very simple app.
+Exercise 6 is where we will piece all of the components together to build a very simple React app.
