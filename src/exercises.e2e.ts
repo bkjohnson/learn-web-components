@@ -94,7 +94,7 @@ describe('Exercise 4', () => {
 
 
 describe('Exercise 5', () => {
-  it('renders with named slots', async () => {
+  it('renders items using lifecycle method', async () => {
     const page = await newE2EPage();
     await page.setContent('<app-shell></app-shell>');
 
@@ -111,7 +111,7 @@ describe('Exercise 5', () => {
       </app-shell>
     `)
 
-    await new Promise(r => setTimeout(r, 2000));
+    await new Promise(r => setTimeout(r, 4000));
 
     element = await page.find('app-shell');
     // Props of child components don't show up
@@ -128,7 +128,5 @@ describe('Exercise 5', () => {
         </mock:shadow-root>
       </app-shell>
     `)
-
-
   });
 });

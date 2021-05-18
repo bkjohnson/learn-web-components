@@ -12,6 +12,7 @@ export class AppShell {
   items: string[];
 
   async connectedCallback() {
+    // Simulate latency from an API call
     await new Promise(r => setTimeout(r, 2000));
 
     this.items = [
