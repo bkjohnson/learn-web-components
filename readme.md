@@ -37,6 +37,17 @@ To run the tests for the components, run:
 yarn test
 ```
 
+### React setup
+
+The exercises can also be completed by using a React + NextJS app rather than the Stencil dev server.
+To set this up:
+
+```bash
+cd src/react-app
+yarn
+yarn dev
+```
+
 ## Exercises
 
 This project is organized into several different exercises to teach the core concepts of Web Components and some Stencil features.

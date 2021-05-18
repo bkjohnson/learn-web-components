@@ -16,13 +16,7 @@ git checkout -f ex-6
 
 ### Run command
 
-To start the React app:
-
-```bash
-cd src/react-app
-yarn
-yarn dev
-```
+To start the React app follow the instructions in [the project readme](../readme.md#react-setup).
 
 ## 2. In your browser
 
