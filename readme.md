@@ -42,7 +42,7 @@ yarn test
 This project is organized into several different exercises to teach the core concepts of Web Components and some Stencil features.
 
 - [Exercise 1](./exercises/ex_1.md)
-  - Using props on an already provided Web Component.
+    - Use props on an already provided Web Component.
 
 - [Exercise 2](./exercises/ex_2.md)
     - Add props to an existing Web Component definition.
