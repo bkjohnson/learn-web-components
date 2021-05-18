@@ -30,6 +30,7 @@ export namespace Components {
         "name": string;
     }
     interface TodoNotification {
+        "duration": number;
     }
 }
 declare global {
@@ -97,6 +98,7 @@ declare namespace LocalJSX {
         "onTodoItemToggled"?: (event: CustomEvent<any>) => void;
     }
     interface TodoNotification {
+        "duration"?: number;
     }
     interface IntrinsicElements {
         "app-shell": AppShell;

@@ -1,4 +1,4 @@
-import { Component, Host, Listen, State, h } from '@stencil/core';
+import { Component, Host, Listen, Prop, State, h } from '@stencil/core';
 
 @Component({
   tag: 'todo-notification',
@@ -6,6 +6,9 @@ import { Component, Host, Listen, State, h } from '@stencil/core';
   shadow: true,
 })
 export class TodoNotification {
+
+  @Prop() duration: number = 3;
+  static MILLISECONDS = 1000
 
   @State() toastMessages: string[] = [];
 
@@ -17,7 +20,7 @@ export class TodoNotification {
     setTimeout( () => {
       this.toastMessages.shift()
       this.toastMessages = [...this.toastMessages]
-    }, 3000)
+    }, this.duration * TodoNotification.MILLISECONDS)
   }
 
   render() {
