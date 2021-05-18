@@ -41,27 +41,20 @@ yarn test
 
 This project is organized into several different exercises to teach the core concepts of Web Components and some Stencil features.
 
+- [Exercise 1](./exercises/ex_1.md)
+  - Using props on an already provided Web Component.
 
-### Exercise 1
+- [Exercise 2](./exercises/ex_2.md)
+    - Add props to an existing Web Component definition.
 
-Exercise 1 is about using props on an already provided Web Component.
+- [Exercise 3](./exercises/ex_3.md)
+    - Fire a Custom Event.
 
-### Exercise 2
+- [Exercise 4](./exercises/ex_4.md)
+    - Handle Custom Events and use internal state.
 
-Exercise 2 is about adding props to an existing Web Component definition.
+- [Exercise 5](./exercises/ex_5.md)
+    - Use a component lifecycle method and create a named `<slot>`.
 
-### Exercise 3
-
-Exercise 3 is about firing Custom Events.
-
-### Exercise 4
-
-Exercise 4 is Custom Events continued. This will focus on event handling and using internal State.
-
-### Exercise 5
-
-Exercise 5 is back to Web Components. It will focus on the lifecycle methods and templating using slots.
-
-### Exercise 6
-
-Exercise 6 is where we will piece all of the components together to build a very simple React app.
+- [Exercise 6](./exercises/ex_6.md)
+    - Piece the components together to build a simple app that works in React and on a plain HTML page.
