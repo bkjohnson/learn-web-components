@@ -1,4 +1,4 @@
-import { Component, Host, Prop, h } from '@stencil/core';
+import { Component, Host, h } from '@stencil/core';
 
 @Component({
   tag: 'todo-completed',
@@ -7,12 +7,8 @@ import { Component, Host, Prop, h } from '@stencil/core';
 })
 export class TodoCompleted {
 
-  @Prop() completed: number;
-
-  @Prop() total: number;
-
   render() {
-    const { completed, total } = this;
+    const { completed, total } = {completed: 0, total: 0 };
     return (
       <Host>
         <span>You have completed {completed} out of {total} items.</span>

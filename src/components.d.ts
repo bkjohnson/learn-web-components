@@ -23,8 +23,6 @@ export namespace Components {
         "middle": string;
     }
     interface TodoCompleted {
-        "completed": number;
-        "total": number;
     }
     interface TodoItem {
         "name": string;
@@ -90,8 +88,6 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface TodoCompleted {
-        "completed"?: number;
-        "total"?: number;
     }
     interface TodoItem {
         "name"?: string;

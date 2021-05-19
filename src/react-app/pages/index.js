@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <todo-item name="Fix that step"></todo-item>
+        <todo-completed completed="5" total="10"></todo-completed>
       </main>
     </div>
   )

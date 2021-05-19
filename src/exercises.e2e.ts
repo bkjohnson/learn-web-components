@@ -48,7 +48,7 @@ describe('Exercise 2', () => {
   });
 });
 
-describe('Exercise 3', () => {
+describe.skip('Exercise 3', () => {
   it('fires a custom event when toggled', async () => {
     const page = await newE2EPage();
     await page.setContent('<todo-item name="Take compost out"></todo-item>');
