@@ -12,8 +12,10 @@ export default function Home() {
       </Head>
 
       <main>
-        <app-shell>
-        </app-shell>
+        <todo-notification>
+          <todo-item name="Fix that step"></todo-item>
+          <todo-item name="Take out compost"></todo-item>
+        </todo-notification>
       </main>
     </div>
   )

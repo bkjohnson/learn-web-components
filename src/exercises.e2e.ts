@@ -93,7 +93,7 @@ describe('Exercise 4', () => {
 });
 
 
-describe('Exercise 5', () => {
+describe.skip('Exercise 5', () => {
   it('renders items using lifecycle method', async () => {
     const page = await newE2EPage();
     await page.setContent('<app-shell></app-shell>');

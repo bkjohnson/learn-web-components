@@ -14,13 +14,7 @@ export class TodoNotification {
 
   @Listen('todoItemToggled')
   handleToggle(event: CustomEvent) {
-    const itemName = event.detail.name
-    this.toastMessages = [...this.toastMessages, `${itemName} checked`]
-
-    setTimeout( () => {
-      this.toastMessages.shift()
-      this.toastMessages = [...this.toastMessages]
-    }, this.duration * TodoNotification.MILLISECONDS)
+    console.log(event)
   }
 
   render() {
