@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, Host, Prop, h } from '@stencil/core';
+import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'todo-item',
@@ -10,12 +10,7 @@ export class TodoItem {
 
   checked: boolean = false;
 
-  @Event()
-  todoItemToggled: EventEmitter;
-
   private toggleChecked(): void {
-    this.checked = !this.checked;
-    this.todoItemToggled.emit({ name: this.name, checked: this.checked });
   }
 
   render() {

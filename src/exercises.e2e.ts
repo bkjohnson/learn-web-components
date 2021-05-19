@@ -64,7 +64,7 @@ describe('Exercise 3', () => {
 });
 
 
-describe('Exercise 4', () => {
+describe.skip('Exercise 4', () => {
   it('listens for an event and renders a toast', async () => {
     const page = await newE2EPage();
     await page.setContent(`

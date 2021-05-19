@@ -95,7 +95,6 @@ declare namespace LocalJSX {
     }
     interface TodoItem {
         "name"?: string;
-        "onTodoItemToggled"?: (event: CustomEvent<any>) => void;
     }
     interface TodoNotification {
         "duration"?: number;

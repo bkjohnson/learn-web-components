@@ -12,10 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <todo-notification>
-          <todo-item name="Fix that step"></todo-item>
-          <todo-item name="Take out compost"></todo-item>
-        </todo-notification>
+        <todo-item name="Fix that step"></todo-item>
       </main>
     </div>
   )
