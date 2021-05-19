@@ -1,10 +1,10 @@
 # Exercise 1
 
-This exercise is about simply using a prop on an already-provided Web Component. For this exercise we will be using `<my-component>` as our Web Component.
+This exercise is about using Web Component props. For this exercise we will be using `<my-component>` as our Web Component.
 
 ## 1. In your console
 
-Since this is the first thing we are doing, make sure you followed the [Getting Started instructions](../readme.md#getting-started) in the root `readme`.
+Since this is the first exercise, make sure you followed the [Getting Started instructions](../readme.md#getting-started) in the root `readme`.
 
 Once your environment is set up you may continue.
 
@@ -18,7 +18,7 @@ git checkout -f ex-1
 
 ### Setting expectations
 
-Most of the exercises have accompanying automated tests which start out as failing. Once we are finished with the exercise, the tests should pass. To let us know what we are trying to accomplish, run the tests and quickly glance at the output:
+Most of the exercises have accompanying automated tests. Once we are finished with the exercise, the tests should pass. To let us know what we are trying to accomplish, run the tests and quickly glance at the output:
 
 ```bash
 yarn test
