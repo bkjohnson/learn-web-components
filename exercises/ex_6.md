@@ -36,9 +36,9 @@ import { defineCustomElements } from '../../../loader';
 defineCustomElements();
 ```
 
-The `loader` is a build output from Stencil containing all of the pieces for registering our custom components with the browser as well as lazy loading them on the page.
+The `loader` is a [build output](https://stenciljs.com/docs/output-targets) from Stencil containing all of the pieces for registering our custom components with the browser and as lazy loading them on the page.
 
-**Note:** `defineCustomElements()` doesn't need to be called in each file where a Web Component is in use, only in a module that appears on every page.
+**Note:** `defineCustomElements()` only needs to be called once per page load. Often, this happens in a Web Components loader script that's executed before any application code.
 
 ### Using named slots
 
@@ -50,4 +50,4 @@ We did this in the previous exercise, but let's explore this a bit more.
 
 ## Wrapping up
 
-If you have been making your changes in `src/index.html`, copy them into `src/react-app/pages/index.js`. You should see that the app works identically in React as well as on a plain HTML page, provided that the Web Components have been defined with the browser's custom element registry.
+If you have been making your changes in `src/index.html`, copy them into `src/react-app/pages/index.js`. You should see that the app works the same in React as it does on a plain HTML page, as long as the Web Components have been defined with the browser's custom element registry.
