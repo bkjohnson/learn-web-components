@@ -1,6 +1,6 @@
 # Exercise 2
 
-This exercise will focus on further modifying a Web Component definition to add our own custom props. This builds on exercise 1, since by the end of it we will be using the props that we made available.
+This exercise will focus on adding a prop to a Web Component.
 
 ## 1. In your console
 
@@ -41,7 +41,7 @@ Notice the "**You have completed 0 out of 0 items.**" text. We would like this m
 1. Open `src/index.html`
 1. Find the `<todo-completed>` node and see that it already has the `todo` and `completed` props on the node.
 
-We are already passing props to the component, but similar to Exercise 1, it is not making use of them. We'll have to modify the component definition to change that.
+We're already passing props to the component, but similar to Exercise 1, it's not making use of them. We'll have to modify the component definition to change that.
 
 1. Open `src/components/todo-completed/todo-completed.tsx`
 1. We can see where the hard-coding is coming from:
@@ -55,14 +55,14 @@ We are already passing props to the component, but similar to Exercise 1, it is 
       );
   ```
 
-To correct this problem we must do three things:
+To correct this problem, we must do three things:
 1. Import `Prop` from `@stencil/core`
 1. Use the `@Prop()` decorator in the component definition
-1. Destructure the `completed` and `total` consts from `this` instead of a hardcoded Object
+1. Destructure the `completed` and `total` consts from `this` instead of a hard-coded Object
 
 ## Wrapping up
 
-Once your changes are compiled and the page is refreshed, you should see the props reflected in the rendered markup! Let's double check that we're finished by seeing if the tests pass:
+Once your changes are compiled and the page is refreshed, you should see the props reflected in the rendered markup! Let's double-check that we're finished by seeing if the tests pass:
 
 ```bash
 yarn test
