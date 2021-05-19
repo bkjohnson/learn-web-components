@@ -8,6 +8,14 @@ Since this is the first thing we are doing, make sure you followed the [Getting 
 
 Once your environment is set up you may continue.
 
+### Branch checkout
+
+We will be using the branch `ex-1`:
+
+```bash
+git checkout -f ex-1
+```
+
 ### Setting expectations
 
 Most of the exercises have accompanying automated tests which start out as failing. Once we are finished with the exercise, the tests should pass. To let us know what we are trying to accomplish, run the tests and quickly glance at the output:
