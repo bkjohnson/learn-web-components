@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <todo-completed completed="5" total="10"></todo-completed>
+        <my-component></my-component>
       </main>
     </div>
   )

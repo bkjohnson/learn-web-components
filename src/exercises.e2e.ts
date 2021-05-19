@@ -26,7 +26,7 @@ describe('Exercise 1', () => {
   });
 });
 
-describe('Exercise 2', () => {
+describe.skip('Exercise 2', () => {
   it('renders using the new custom props', async () => {
     const page = await newE2EPage();
 
