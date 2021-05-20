@@ -1,8 +1,8 @@
 # Exercise 3
 
-This exercise will involve firing a CustomEvent. This isn't specific to Web Components, but is [an API that is already a part of modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent). We start off with a `<todo-item>` Web Component that has a `name` prop. The component itself is mostly a wrapper for a checkbox.
+This exercise will involve firing a `CustomEvent`. This is a [standard API that is already a part of modern browsers](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent). We start off with a `<todo-item>` Web Component that has a `name` prop. The component itself is mostly a wrapper for a checkbox.
 
-Our goal by the end of the exercise is to have a Web Component that fires a CustomEvent anytime the checkbox is toggled, and anything else can listen for the event and take an action based on it.
+Our goal by the end of the exercise is to have a Web Component that fires a `CustomEvent` anytime the checkbox is toggled, and anything else can listen for the event and take an action based on it.
 
 ## 1. In your console
 
@@ -34,7 +34,7 @@ yarn start
 
 ## 2. In your browser
 
-You should see something that resembles a checkbox with an enlarged clicking area for ease of use. When you click on it the only thing that noticeably happens is that the checkbox gets toggled.
+You should see something that resembles a checkbox with an enlarged click target. When you click on it, the only thing that happens is the checkbox gets toggled.
 
 ## 3. In your editor
 
@@ -57,13 +57,11 @@ There are a few things we need to do in order to get that event to fire. Since w
 1. Similar to using `@Prop`, use the `@Event` decorator to declare a variable of type `EventEmitter`
 1. Have the `onClick` handler for the checkbox fire the CustomEvent using our `EventEmitter` object
 
-This last part is where the abstraction happens. We use:
+This last part is where the abstraction happens. Instead of [the `dispatchEvent()` call](https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events#creating_custom_events), we use:
 
 ```js
 this.todoItemToggled.emit();
 ```
-
-Instead of [the `dispatchEvent()` call](https://developer.mozilla.org/en-US/docs/Web/Events/Creating_and_triggering_events#creating_custom_events).
 
 Our tests expect there to be a `name` and `checked` values in the event detail object. We can pass an optional object to the `.emit()` call which will get passed in as the detail.
 
@@ -75,3 +73,5 @@ After making the necessary changes, when we toggle the checkbox we should see a 
 yarn test
 ```
 
+## Further reading
+See the [Stencil Events docs](https://stenciljs.com/docs/events) for more information about firing custom events.
